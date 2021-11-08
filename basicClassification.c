@@ -3,10 +3,6 @@
 int factorial(int num)
 {
     int sum=1;
-    if(num == 0)
-    {
-        return 0;
-    }
     for(int i=1;i<=num;i++)
     {
         sum=sum*i;
