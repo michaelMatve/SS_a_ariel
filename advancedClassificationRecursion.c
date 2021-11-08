@@ -11,7 +11,7 @@ int isArmstrongHelp(int num , int count)
 
 int isArmstrong(int num)
 {
-    int counter;
+    int counter=0;
     for(int i=num ; i>0 ; i=i/10)
     {
         counter = counter + 1;

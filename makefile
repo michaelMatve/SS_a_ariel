@@ -37,14 +37,14 @@ libclassloop.so: basicClassification.o advancedClassificationLoop.o
 	gcc -Wall -shared basicClassification.o advancedClassificationLoop.o -o libclassloop.so
 
 mains: main.o libclassrec.a
-	gcc -Wall main.o -L. -lclassrec -o mains -lm
+	gcc -Wall main.o ./libclassrec.a -o mains -lm
 
 maindloop: main.o libclassloop.so
-	gcc -Wall main.o -L. -lclassloop -o maindloop -lm
+	gcc -Wall main.o ./libclassloop.so -o maindloop -lm
 
 
 maindrec: main.o libclassrec.so
-	gcc -Wall main.o -L. -lclassrec -o maindrec -lm
+	gcc -Wall main.o ./libclassrec.so -o maindrec -lm
 
 
 
