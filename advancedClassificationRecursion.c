@@ -24,27 +24,25 @@ int isArmstrong(int num)
     return 0;
 }
 
+int isPalindromeHelper(int num, int temp)
+{
+    if(num==0)
+    {
+        return temp;
+    }
+    temp = (temp*10)+num%10;
+    num = num/10;
+    return isPalindromeHelper(num,temp);
+    
+}
+
 int isPalindrome(int num)
 {
-    if(num<10)
+    int temp_num= isPalindromeHelper(num,0);
+    if(temp_num==num)
     {
         return 1;
     }
-    int counte =0;
-    int small = num%10;
-    int tempnum=num/10;
-    while (tempnum>10)
-    {
-        tempnum = tempnum/10;
-        counte = counte +1;
-    }
-    if(tempnum != small)
-    {
-        return 0;
-    }
-    int take_mod = (int)(pow(10,counte));
-    tempnum = num / 10;
-    tempnum = tempnum % take_mod;
-    return isPalindrome(tempnum);
+    return 0;
     
 }

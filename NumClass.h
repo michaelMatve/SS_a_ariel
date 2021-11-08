@@ -4,3 +4,4 @@ int factorial(int num);
 int isPrime(int num);
 int isStrong(int num);
 int isArmstrongHelp(int num);
+int isPalindromeHelper(int num, int temp);
